@@ -21,7 +21,7 @@ Gautham presents and runs the live demo on his CachyOS laptop; Archana opens the
 - [ ] Sat — Unzip the evidence image and run the full case once using the demo script; note anything that differs
 - [ ] Sat — Untick aLEAPP, iLEAPP and YARA in the ingest screen (Windows-only); confirm ingest finishes
 - [ ] Sun — Make Autopsy readable on a projector: start it with `autopsy --fontsize 16` and test at 1920×1080
-- [ ] Sun — Rehearse slides 5–14 out loud twice with a timer (target 9 min)
+- [ ] Sun — Rehearse slides 5–16 out loud twice with a timer (target 9 min)
 - [ ] Mon — Keep a finished copy of the case as a fallback in case live ingest fails
 - [ ] Mon — Test HDMI / USB-C output and screen mirroring on CachyOS
 
@@ -47,13 +47,14 @@ Gautham presents and runs the live demo on his CachyOS laptop; Archana opens the
 | 2 What is Autopsy | Archana | 0:30–1:30 | Open-source GUI on The Sleuth Kit; never writes to evidence; v4.23.1. |
 | 3 How it flows | Archana | 1:30–2:15 | Case → data source → ingest modules → blackboard → review → report. |
 | 4 Where it's used | Archana | 2:15–3:00 | Ours is the corporate insider-threat case. Hand over to Gautham. |
-| 5 Installing | Gautham | 3:00–3:45 | Windows = MSI; Linux = snap/AUR or ZIP; Java 21 and Windows-only module gotchas. |
-| 6 The case | Gautham | 3:45–4:30 | Seized USB, Project Falcon leak, three questions, MD5 shown. |
-| 7 Demo plan | Gautham | 4:30–5:00 | Switch to Autopsy (Alt+Tab). |
+| 5 Installing | Gautham | 3:00–3:40 | Windows = MSI; Linux = snap/AUR or ZIP; Java 21 and Windows-only module gotchas. |
+| 6 The case | Gautham | 3:40–4:10 | Seized USB, Project Falcon leak, MD5 shown. |
+| 7 Three questions | Gautham | 4:10–4:40 | Q1 what's on it, Q2 who it was going to, Q3 when and where. |
+| 8 Demo plan | Gautham | 4:40–5:00 | Switch to Autopsy (Alt+Tab). |
 | LIVE DEMO | Gautham | 5:00–10:00 | Follow the demo script. Archana gives 1-minute warnings. |
-| 8–12 Findings | Gautham | (backup) | Skip if the demo worked; use instead of the demo if it fails. |
-| 13 Integrity + report | Gautham | 10:00–10:45 | Hashes match → evidence unchanged; one-click HTML report. |
-| 14 Conclusion | Archana | 10:45–12:00 | Recovered, exposed, linked, located, sequenced, proved. "Questions?" |
+| 9–14 Findings | Gautham | (backup) | Skip if the demo worked; use instead of the demo if it fails. Slide 14 (drawn timeline) is worth showing either way. |
+| 15 Integrity + report | Gautham | 10:00–10:45 | Hashes match → evidence unchanged; one-click HTML report. |
+| 16 Conclusion | Archana | 10:45–12:00 | Answer Q1, Q2, Q3 from the slide. "Questions?" |
 
 If the slot is shorter, cut slide 4 and shorten the demo to deleted files, mismatch and keyword hits.
 
@@ -74,7 +75,7 @@ If the slot is shorter, cut slide 4 and shorten the demo to deleted files, misma
 7. **E-mail regex** — Toolbar Keyword Search → Regular Expression → `[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}` → Search.
 8. **EXIF + ZIP** — Analysis Results → EXIF Metadata (date and GPS). Then Data Sources → Archive → `backup_oct.zip` → `Falcon_BOM.csv`.
 9. **Timeline** — Toolbar Timeline → List. Scroll 11 → 13 Oct.
-10. **Integrity** — Envelope icon (Ingest Inbox) → "Integrity … verified". Back to slide 13.
+10. **Integrity** — Envelope icon (Ingest Inbox) → "Integrity … verified". Back to slide 15.
 
 If the tree doesn't show new results after ingest, collapse and re-expand Analysis Results.
 
@@ -84,7 +85,7 @@ If the tree doesn't show new results after ingest, collapse and re-expand Analys
 | --- | --- | --- |
 | Java version | `java -version` should show 21 | `sudo pacman -S jdk21-openjdk`, start Autopsy with `--jdkhome /usr/lib/jvm/java-21-openjdk` |
 | Windows-only modules | Untick aLEAPP, iLEAPP, YARA | Ingest refuses to start until unticked |
-| Text size on projector | Start with `--fontsize 16` | Use the slide 8–12 screenshots instead |
+| Text size on projector | Start with `--fontsize 16` | Use the slide 9–13 screenshots instead |
 | Wayland glitches | Java runs under XWayland | Log in to an X11 session for the demo |
 | Keyword search won't start | Watch for a "Solr" error when opening the case | Reopen the case; fall back to Archana's laptop |
 | Geolocation map | Needs internet for map tiles | Show the EXIF Metadata table instead |
@@ -93,7 +94,7 @@ If the tree doesn't show new results after ingest, collapse and re-expand Analys
 
 1. Live ingest fails → open the pre-processed case on Gautham's laptop and continue from step 4.
 2. Gautham's laptop fails → switch HDMI to Archana's laptop with the same case open.
-3. Both fail → present slides 8–13 (real screenshots of this case).
+3. Both fail → present slides 9–15 (real screenshots of this case).
 
 ## Q&A bank
 
