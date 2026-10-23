@@ -82,9 +82,9 @@ async function icon(Comp, color, size = 256) {
     search: await icon(fa.FaSearch, HEX.accent1), trash: await icon(fa.FaTrashRestore, HEX.accent1),
     mask: await icon(fa.FaMask, HEX.accent1), map: await icon(fa.FaMapMarkerAlt, HEX.accent1),
     clock: await icon(fa.FaClock, HEX.accent1), shield: await icon(fa.FaShieldAlt, HEX.accent1),
-    gavel: await icon(fa.FaGavel, HEX.background1), building: await icon(fa.FaBuilding, HEX.background1),
-    bolt: await icon(fa.FaBolt, HEX.background1), mobile: await icon(fa.FaMobileAlt, HEX.background1),
-    camera: await icon(fa.FaCamera, HEX.background1), grad: await icon(fa.FaGraduationCap, HEX.background1),
+    gavel: await icon(fa.FaGavel, HEX.lt1), building: await icon(fa.FaBuilding, HEX.lt1),
+    bolt: await icon(fa.FaBolt, HEX.lt1), mobile: await icon(fa.FaMobileAlt, HEX.lt1),
+    camera: await icon(fa.FaCamera, HEX.lt1), grad: await icon(fa.FaGraduationCap, HEX.lt1),
     usb: await icon(fa.FaUsb, HEX.accent1), windows: await icon(fa.FaWindows, HEX.dk2), linux: await icon(fa.FaLinux, HEX.dk2),
     warn: await icon(fa.FaExclamationTriangle, HEX.accent2),
   };
